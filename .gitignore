@@ -1,0 +1,26 @@
+# Eclipse
+*.classpath
+*.project
+*.settings/
+.metadata/
+ 
+# Java
+bin/
+target/
+ 
+# Maven
+log/
+target/
+*.iml
+*.ipr
+*.iws
+.idea/
+ 
+# TestNG
+test-output/
+ 
+# OS-specific files
+.DS_Store
+ 
+#Screenshots
+screenshots/
