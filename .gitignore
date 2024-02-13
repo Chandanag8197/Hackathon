@@ -23,4 +23,7 @@ test-output/
 .DS_Store
  
 #Screenshots
-screenshots/
+screenShots/
+
+#ExtentReports
+InsurenceReports/

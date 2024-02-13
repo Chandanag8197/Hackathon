@@ -19,6 +19,7 @@ public class TC_003_HealthInsurencePageTest extends baseClass{
 	} catch (IOException e) {
 		e.printStackTrace();
 	}
+	  hip.health_menu();
 
   }
 }

@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 
@@ -63,6 +64,39 @@ public class HealthInsurencePage extends basePage{
 		}
 		
 		
+	}
+	
+	@FindBy(xpath="//a[text()='Policybazaar']")
+	WebElement back_to_home;
+	
+	@FindBy(xpath="//a[text()='Insurance Products ']")
+	WebElement Insurence_products;
+	
+//	@FindBy(xpath="//a[@class='headlink'][text()='Health Insurance']")
+//	WebElement healthInsurence_menu;
+	
+	@FindAll(@FindBy(xpath="(//div[@class='ruby-col-3 hidden-md'])[2]//ul//li"))
+	List<WebElement> healthInsurence_menu;
+	
+	public void health_menu() {
+		
+		back_to_home.click();
+		sleep(2000);
+		
+		Actions action =new Actions(driver);
+		action.moveToElement(Insurence_products).perform();
+		
+		for(int i=0;i<healthInsurence_menu.size();i++) {
+			System.out.println(healthInsurence_menu.get(i).getText());
+			try {
+				eu.setCellData("healthInsureneceMenu", i, 0,healthInsurence_menu.get(i).getText());
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			
+			sleep(1000);
+			
+		}
 	}
 
 }

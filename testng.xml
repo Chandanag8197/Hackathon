@@ -20,7 +20,7 @@
   
   <test thread-count="5" name="edgetest">
    	<parameter name="os" value="Windows" />
-  	<parameter name="browser"  value="edge"/>  
+  	<parameter name="browser"  value="edge"/> 
     <classes>
     	
  		<class name="testCases.TC_001_TravelInsurencePageTest"/>
